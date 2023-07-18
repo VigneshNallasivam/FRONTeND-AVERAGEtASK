@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculation-Form</title>
+    <link rel="stylesheet" href="./style.css">
+    <script type="text/javascript" src="./script.js"></script>
+</head>
+
+<body>
+    <section class="section_background">
+        <header>
+            <h1>Calculation Form</h1>
+        </header>
+        <form autocomplete="on">
+            <div class="flex_1">
+                <fieldset>
+                    <legend>First Name <span style="color: red;">*</span></legend>
+                    <input type="text" id="fname" name="fname" autocomplete="off" onfocus="highlight()">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Last Name <span style="color: red;">*</span></legend>
+                    <input type="text" id="lname" name="lname" autocomplete="off">
+                </fieldset>
+            </div>
+
+            <div class="flex_2">
+                <fieldset>
+                    <legend>Standard</legend>
+                    <select name="standard" onchange="selected_standard()" id="standard">
+                        <option value="1">1st Standard</option>
+                        <option value="2">2nd Standard</option>
+                        <option value="3">3rd Standard</option>
+                        <option value="4">4th Standard</option>
+                        <option value="5">5th Standard</option>
+                        <option value="6">6th Standard</option>
+                        <option value="7">7th Standard</option>
+                        <option value="8">8th Standard</option>
+                        <option value="9">9th Standard</option>
+                        <option value="10">10th Standard</option>
+                        <option value="11">11th Standard</option>
+                        <option value="12">12th Standard</option>
+                    </select>
+                    <!-- <input type="text" id="Standard" name="Standard"> -->
+                </fieldset>
+
+                <fieldset>
+                    <legend>Section</legend>
+                    <select name="section" onchange="selected_section()" id="section">
+                        <option>A-Section</option>
+                        <option>B-Section</option>
+                        <option>C-Section</option>
+                    </select>
+                    <!-- <input type="text" id="section" name="section"> -->
+                </fieldset>
+            </div>
+
+            <div class="flex_3">
+                <fieldset>
+                    <legend>Email <span style="color: red;">*</span></legend>
+                    <input type="email submit" pattern="[a-z0-9]+[@][a-z]+[.][a-z]+" id="email" name="email"
+                        autocomplete="on">
+                </fieldset>
+
+                <fieldset>
+                    <legend>Mobile Number <span style="color: red;">*</span></legend>
+                    <input type="text submit" pattern="[789][0-9]{9}" id="mobile" name="mobile" autocomplete="on">
+                </fieldset>
+            </div>
+
+            <div class="flex_mark">
+                <div class="flex_4">
+                    <fieldset id="mark">
+                        <legend>English</legend>
+                        <input type="number" id="english" name="english" autocomplete="on">
+                    </fieldset>
+
+                    <fieldset id="mark">
+                        <legend>Tamil</legend>
+                        <input type="number" id="tamil" name="tamil" autocomplete="on">
+                    </fieldset>
+                </div>
+
+                <div class="flex_5">
+                    <fieldset id="mark">
+                        <legend>Maths</legend>
+                        <input type="number" id="maths" name="maths" autocomplete="on">
+                    </fieldset>
+
+                    <fieldset id="mark">
+                        <legend>Science</legend>
+                        <input type="number" id="science" name="science" autocomplete="on">
+                    </fieldset>
+                </div>
+
+                <div class="flex_6">
+                    <fieldset id="mark">
+                        <legend>History</legend>
+                        <input type="number" id="history" name="history" autocomplete="on">
+                    </fieldset>
+
+                    <fieldset id="mark">
+                        <legend>Geography</legend>
+                        <input type="number" id="geography" name="geography" autocomplete="on">
+                    </fieldset>
+                </div>
+
+                <div class="flex_7">
+                    <fieldset id="mark">
+                        <legend>General</legend>
+                        <input type="number" id="general" name="general" autocomplete="on">
+                    </fieldset>
+
+                    <fieldset id="mark">
+                        <legend>Moral</legend>
+                        <input type="number" id="moral" name="moral" autocomplete="on">
+                    </fieldset>
+                </div>
+            </div>
+
+            <button class="calculate_button" type="button" onclick="myCalculation()">CALCULATE</button>
+
+            <fieldset class="calculation_fieldset">
+                <legend class="calculations">CALCULATIONS <span style="color: red;">*</span></legend>
+                <div class="flex_8">
+                    <fieldset>
+                        <legend>Total</legend>
+                        <input type="text" id="total_mark" name="total" disabled>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Average</legend>
+                        <input type="text" id="avg_mark" name="Average" disabled>
+                    </fieldset>
+                </div>
+
+                <div class="flex_9">
+                    <fieldset>
+                        <legend>Grade</legend>
+                        <input type="text" id="grade" name="total" disabled>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>Result</legend>
+                        <input type="text" id="result" name="result" disabled>
+                    </fieldset>
+                </div>
+            </fieldset>
+            <button class="reset_button" type="reset">Reset</button>
+        <button class="submit_button" type="submit">Submit</button>
+        </form>
+
+        
+    </section>
+</body>
+
+</html>
